@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+}
+/* lest side image */
+section .image{
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+section .image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* right side content */
+section .registration_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-color:rgba(235, 203, 145, 0.397) ;
+}
+section .registration_box .register{
+    width: 50%;
+
+}
+section .registration_box .register h2{
+    font-weight: 800;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+section .registration_box .register .input_box{
+    margin-bottom: 20px;
+}
+section .registration_box .register .input_box span{
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+section .registration_box .register .input_box input{
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border:1px solid rgb(161, 105, 52);
+    font-size: 16px;
+    color: black;
+    background: transparent;
+    border-radius: 30px;
+}
+section .registration_box .register .input_box input[type="submit"]{
+    background: rgb(218, 157, 77);
+    color: rgb(245, 244, 244);
+    outline: none;
+    border : none;
+    font-weight: 600;
+    font-size: 20px;
+
+}
+/* for login page */
+section .registration_box .register .input_box p a{
+    color: rgb(218, 157, 77);
+}
+
+
