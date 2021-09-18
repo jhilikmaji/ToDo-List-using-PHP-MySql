@@ -1,9 +1,4 @@
-<?php
-if(isset($_SESSION['loginuser']))
-{
-    header('location:to_do_list.php');
-}
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +10,7 @@ if(isset($_SESSION['loginuser']))
 </head>
 <body>
     <section>
-        
+         
 
 
         <!-- left side contant -->
