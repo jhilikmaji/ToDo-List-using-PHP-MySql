@@ -45,11 +45,11 @@
                     
                 </div>
                 <div>
-                    <?php
+                    <span style="color:red !important;"><?php
                     if(isset($_GET['msg'])){
                         echo $_GET['msg'];
                     }
-                    ?>
+                    ?></span>
                 </div>
             </div>
         </div>

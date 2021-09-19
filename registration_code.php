@@ -18,11 +18,11 @@ else
 {
      if($password==$repassword)
      {
-         $password=password_hash($password,PASSWORD_DEFAULT);
+        
          $store=mysqli_query($con,"INSERT INTO `userdb`(`username`,`email`,`password`)values('$username','$email','$password')")or die("connection error");
          if($store)
          {
-             header('location:registration.php?msg=Successfully Registered');
+             header('location:login.php');
           
          }
          else{
