@@ -7,8 +7,8 @@ if(isset($_POST['submit'])){
 $email= $_POST['email'];
 
 	
-                    	$to = "$email";// jake mail pathabo tar email id ekhane  lekha hobe
-                    	$subject = "Reset Your Login Password"; //mail r subject
+                    	$to = "$email";
+                    	$subject = "Reset Your Login Password";
                     	
                     	$message = "
                     	<html>
@@ -26,9 +26,9 @@ $email= $_POST['email'];
                         </body>
                     	</html>";
                     	
-                    	// Always set content-type when sending HTML email
-                    	$headers = "MIME-Version: 1.0" . "\r\n";
-                    	$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+                    	
+                    	
+                    	$headers = "Content-type:text/html;charset=UTF-8" . "\r\n";
                     	
                     	// More headers
                     	$headers .= 'From:LOGIN <jhilikmaji1998@gmail.com>';
