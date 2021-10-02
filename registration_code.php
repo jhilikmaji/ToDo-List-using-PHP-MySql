@@ -18,7 +18,7 @@ else
 {
      if($password==$repassword)
      {
-        
+         
          $store=mysqli_query($con,"INSERT INTO `userdb`(`username`,`email`,`password`)values('$username','$email','$password')")or die("connection error");
          if($store)
          {

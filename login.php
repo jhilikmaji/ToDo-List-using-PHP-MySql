@@ -15,7 +15,7 @@ if(isset($_SESSION['loginuser']))
 </head>
 <body>
     <section>
-         
+        
 
 
         <!-- left side contant -->
@@ -48,12 +48,9 @@ if(isset($_SESSION['loginuser']))
                 </div>
                 <div class="input_box">
                      <a href="forgetpass.php">forget password? </a>
-                    
-                    
                 </div>
                 <div class="input_box">
-                    <p>Don't have an account?  <a href="registration.php">Sing up</a></p>
-                    
+                    <p>Don't have an account? <a href="registration.php">Sing up</a></p>
                     
                 </div>
                 

@@ -3,20 +3,17 @@ require('dbconnection.php');
 session_start();
 if(!isset($_SESSION['loginuser']))
  {
-         header('location:login.php');
+    header('location:login.php');
  }
 if(isset($_SESSION['loginuser'])){
 $user=$_SESSION['loginuser'];
 if(isset($_POST['submit'])){
     $task=$_POST['task'];
-   
-    
-
     mysqli_query($con,"INSERT INTO list(todo,username)values('$task','$user')");
     header('location:to_do_list.php');
 
 }
-$tasks=mysqli_query($con,"SELECT * FROM list WHERE username='$user'");
+$tasks=mysqli_query($con,"SELECT * FROM list WHERE username='$user' ORDER BY status");
 
 $task1=mysqli_num_rows($tasks);
 
@@ -44,7 +41,7 @@ if(isset($_GET['update']))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="to_do_list.css">
 </head>
@@ -57,7 +54,7 @@ if(isset($_GET['update']))
           <span class="spanc"><?php echo $_SESSION['loginuser']; ?></span>
           <form method="post" action="to_do_list.php">
               <div class="input">
-                 <input type="text" name="task" name="task" placeholder="What do you need to do" required>
+                 <input type="text" name="task" placeholder="What do you need to do" required>
                  <button type="submit" name="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
               </div>
               <?php

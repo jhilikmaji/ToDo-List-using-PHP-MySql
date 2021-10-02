@@ -39,17 +39,14 @@
                     <div class="input_box">
                         <input type="submit" name="submit" value="Submit"></div>
                 </form>
-                <div class="input_box">
-                    <p>Back to  <a href="login.php">LOGIN</a>Page</p>
-                    
-                    
-                </div>
+              
                 <div>
-                    <span style="color:red !important;"><?php
+                    <p style="color: red; font-size:20px"> <?php
                     if(isset($_GET['msg'])){
                         echo $_GET['msg'];
                     }
-                    ?></span>
+                    ?></p>
+                   
                 </div>
             </div>
         </div>

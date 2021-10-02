@@ -1,13 +1,12 @@
 <?php
 require('dbconnection.php');
-print_r($_REQUEST);
+// print_r($_REQUEST);
 $password=$_POST['password'];
 $rpassword=$_POST['rpassword'];
 $email=$_POST['email'];
 if($password==$rpassword)
 {
-    $password=password_hash($password,PASSWORD_DEFAULT);
-    $cpassword=mysqli_query($con,"UPDATE `userdb` SET `password`='$password' WHERE `email`= '$email'")or die(mysqli_error($con));
+     $cpassword=mysqli_query($con,"UPDATE `userdb` SET `password`='$password' WHERE `email`= '$email'")or die(mysqli_error($con));
      if($cpassword)
      {
      
